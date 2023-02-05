@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+
+}
+
+.container {
+    background-color: #202020;
+    padding: 50px 10% 50px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    justify-items: center;
+}
+
+.box {
+    background-color: #2a2a2a;
+    width: 245px;
+    height: 355px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+    cursor: pointer;
+}
+
+.img img {
+    width: 235px;
+    height: 290px;
+    margin-top: 5px;
+    background-size: cover;
+}
+
+.movie-name h3 {
+    color: #ccc;
+    font-size: 16px;
+    margin-top: 4px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.movie-name p {
+    color: #ccc;
+    line-height: 1;
+    text-align: center;
+    margin-top: 2px;
+    font-size: 14px;
+}
+
+.season-nub {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.season-nub h4 {
+    color: #ccc;
+    background-color: #ff7f51;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .box {
+        width: 240;
+        height: 350;
+    }
+
+    .img IMG {
+        width: 230px;
+        height: 285px;
+    }
+
+    .movie-name h3 {
+        font-size: 16px;
+    }
+
+    .movie-name p {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .container {
+        gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
