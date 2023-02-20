@@ -104,7 +104,7 @@
 
         <!-- === kgf chapter 2 === -->
         <div class="box">
-            <a href="7.html">
+            <a href="https://drive.google.com/file/d/1HAxLIdRw0E6MVln-sXkie4kAGtJTChwb/view?usp=share_link">
                 <div class="img">
                     <img src="kgf chapteer 2.jpg" alt="">
                 </div>
@@ -202,24 +202,25 @@
     <div class="contact-us">
         <div class="contact-us-left">
             <h1>Contact <span>Us</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae veritatis nesciunt id porro
-                provident sit magni voluptate adipisci ab aperiam!
+            <p>UV PATEL COLLEGE OF ENGINEERING KHERVA <br>Ganpat University <br>maheshana Gujarat
             </p>
             <div class="social-icon">
                 <ul>
-                    <li><a href=""><i class='bx bxl-instagram'></i></a></li>
-                    <li><a href=""><i class='bx bxl-facebook'></i></a></li>
-                    <li><a href=""><i class='bx bxl-twitter'></i></a></li>
-                    <li><a href=""><i class='bx bxl-youtube'></i></a></li>
+                    <li><a href="https://www.instagram.com/itz_krish_84kp/" target="_blank"><i class='bx bxl-instagram'></i></a></li>
+                    <li><a href="" target="_blank"><i class='bx bxl-facebook'></i></a></li>
+                    <li><a href="" target="_blank"><i class='bx bxl-twitter'></i></a></li>
+                    <li><a href="" target="_blank"><i class='bx bxl-youtube'></i></a></li>
                 </ul>
             </div>
         </div>
         <div class="contact-us-right">
-            <input type="text" name="" id="" placeholder="your name">
-            <input type="email" name="" id="" placeholder="Email">
-            <input type="text" name="" id="" placeholder="write a subject">
-            <textarea name="" id=""></textarea>
-            <button>submit</button>
+            <form action="" method="post" id="form">
+                <input type="text" name="name" id="" placeholder="your name">
+                <input type="email" name="email" id="" placeholder="Email">
+                <input type="text" name="subject" id="" placeholder="write a subject">
+                <textarea name="description" id=""></textarea>
+                <button type="submit" id="submit">submit</button>
+            </form>
         </div>
     </div>
 
@@ -240,6 +241,30 @@
                 }
             }
         }
+
+
+        // for html form to google sheet
+
+        const form = document.querySelector("#form")
+        const submitButton = document.querySelector("#submit")
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyAdsJuWr36EQ3VkE7xm5PgUmJfOitpDUZLMjuyqf_oCr-KGXFP7kw7kAD7fDuiXXgpMQ/exec'
+
+        form.addEventListener('submit', e => {
+            submitButton.disabled = true
+            e.preventDefault()
+            let requestBody = new FormData(form)
+            fetch(scriptURL, { method: 'POST', body: requestBody })
+                .then(response => {
+                    alert('Your data is Successfully saved.', response)
+                    submitButton.disabled = false
+                })
+                .catch(error => {
+                    alert('Error!', error.message)
+                    submitButton.disabled = false
+
+                }
+                )
+        })
     </script>
 
 
