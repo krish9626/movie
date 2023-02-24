@@ -98,7 +98,7 @@
     color: #ccc;
 }
 
-.header span {
+.header h1 span{
     color: #ff7f51;
     font-family: 'poppins';
     font-weight: 100;
@@ -171,7 +171,7 @@
     color: white;
 }
 
-.contact-us-left h1 span {
+.contact-us-left h1 span{
     color: #ff7f51;
 }
 
@@ -292,6 +292,91 @@ textarea {
 }
 
 
+.main-frame{
+    background-color: #202020;
+    padding: 50px 10% 70px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.web-img{
+    width: 500px;
+    aspect-ratio: 16/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ccc;
+    box-sizing: content-box;
+    border: 3px solid #ccc;
+}
+
+.web-img img{
+    width: 500px;
+    aspect-ratio: 16/9;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.main-frame h1{
+    font-family: 'poppins';
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #ff7f51;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-top: 30px;
+}
+
+.main-frame h3{
+    font-family: 'poppins';
+    font-size: 16px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: #ccc;
+    font-weight: 600;
+    margin-top: -3px;
+}
+
+.main-frame h5{
+    color: #ccc;
+    font-family: 'poppins';
+    font-size: 20px;    
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+.web-box-ep{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.web-box-ep h4 {
+    color: #ccc;
+    background-color: #ff7f51;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+
+
+
 
 @media only screen and (max-width: 400px) {
     .container {
@@ -331,6 +416,33 @@ textarea {
     .contact-us {
         grid-template-columns: 1fr;
         gap: 0px;
+    }
+
+    .web-img{
+        width: 350px;
+    }
+    .web-img img{
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 445px){
+
+    .web-img{
+        width: 300px;
+    }
+    .web-img img{
+        width: 300px;
+    }
+
+}
+
+@media only screen and (max-width: 365px){
+    .web-img{
+        width: 270px;
+    }
+    .web-img img{
+        width: 270px;
     }
 }
 
