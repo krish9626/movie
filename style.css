@@ -38,9 +38,9 @@
 .img img {
     width: 235px;
     height: 290px;
-    /* aspect-ratio: 9 / 16; */
     margin-top: 5px;
     background-size: cover;
+    /* overflow: hidden; */
 }
 
 .movie-name h3 {
