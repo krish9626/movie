@@ -105,6 +105,29 @@
     <div class="footer">
         <p>copyright &copy; 2023 SeriesHUB. All Rights Reserved</p>
     </div>
+    
+    <script>
+                const form = document.querySelector("#form")
+        const submitButton = document.querySelector("#submit")
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyAdsJuWr36EQ3VkE7xm5PgUmJfOitpDUZLMjuyqf_oCr-KGXFP7kw7kAD7fDuiXXgpMQ/exec'
+
+        form.addEventListener('submit', e => {
+            submitButton.disabled = true
+            e.preventDefault()
+            let requestBody = new FormData(form)
+            fetch(scriptURL, { method: 'POST', body: requestBody })
+                .then(response => {
+                    alert('Your data is Successfully saved.', response)
+                    submitButton.disabled = false
+                })
+                .catch(error => {
+                    alert('Error!', error.message)
+                    submitButton.disabled = false
+
+                }
+                )
+        })
+    </script>
 
 </body>
 
