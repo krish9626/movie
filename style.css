@@ -9,6 +9,104 @@
 
 }
 
+/* login page css */
+
+.login-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #2a2a2a;
+}
+
+.login-box {
+    background-color: #202020;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 15px;
+}
+
+.input-box {
+    background-color: #2a2a2a;
+    width: 210px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border-radius: 15px;
+}
+
+.input-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    text-align: left;
+    /* text-transform: capitalize; */
+    vertical-align: middle;
+    height: 35px;
+    color: #ccc;
+    font-size: 15px;
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 170px;
+}
+
+.input-box button{
+    background: none;
+    border: none;
+    outline: none;
+    color: #ccc;
+    padding-right: 20px;
+    font-size: 20px;
+    margin-top: 3px;
+}
+
+.input-box button:hover{
+    color: greenyellow;
+    cursor: pointer;
+}
+
+.hide button i{
+    display: none;
+}
+
+.login-btn{
+    outline: none;
+    border: none;
+    background-color: #ff7f51;
+    color: white;
+    font-family: 'poppins';
+    font-size: 16px;
+    width: 100px;
+    height: 30px;
+    line-height: 1;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.login-btn:hover{
+    background-color: #ffac8e;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* login page css :end */
+
+
 .container {
     background-color: #202020;
     padding: 50px 10% 50px 10%;
@@ -98,7 +196,7 @@
     color: #ccc;
 }
 
-.header h1 span{
+.header h1 span {
     color: #ff7f51;
     font-family: 'poppins';
     font-weight: 100;
@@ -171,7 +269,7 @@
     color: white;
 }
 
-.contact-us-left h1 span{
+.contact-us-left h1 span {
     color: #ff7f51;
 }
 
@@ -210,7 +308,7 @@
     gap: 20px;
 }
 
-.social-icon ul li:hover{
+.social-icon ul li:hover {
     background-color: #ffac8e;
     scale: 1.1;
 }
@@ -226,7 +324,7 @@
     width: 100%;
 }
 
-form{
+form {
     display: flex;
     gap: 30px;
     flex-direction: column;
@@ -277,7 +375,8 @@ textarea {
     background-color: #ffac8e;
     color: black;
 }
-.footer{
+
+.footer {
     background-color: #202020;
     height: 70px;
     display: flex;
@@ -285,14 +384,14 @@ textarea {
     align-items: center;
 }
 
-.footer p{
+.footer p {
     color: #fff;
     font-family: 'poppins';
     font-size: 14px;
 }
 
 
-.main-frame{
+.main-frame {
     background-color: #202020;
     padding: 50px 10% 70px 10%;
     display: flex;
@@ -300,7 +399,7 @@ textarea {
     align-items: center;
 }
 
-.web-img{
+.web-img {
     width: 500px;
     aspect-ratio: 16/9;
     display: flex;
@@ -311,7 +410,7 @@ textarea {
     border: 3px solid #ccc;
 }
 
-.web-img img{
+.web-img img {
     width: 500px;
     aspect-ratio: 16/9;
     background-size: cover;
@@ -319,7 +418,7 @@ textarea {
     justify-content: center;
 }
 
-.main-frame h1{
+.main-frame h1 {
     font-family: 'poppins';
     font-size: 30px;
     text-transform: uppercase;
@@ -329,7 +428,7 @@ textarea {
     margin-top: 30px;
 }
 
-.main-frame h3{
+.main-frame h3 {
     font-family: 'poppins';
     font-size: 16px;
     text-transform: capitalize;
@@ -339,16 +438,16 @@ textarea {
     margin-top: -3px;
 }
 
-.main-frame h5{
+.main-frame h5 {
     color: #ccc;
     font-family: 'poppins';
-    font-size: 20px;    
+    font-size: 20px;
     letter-spacing: 1px;
     font-weight: 600;
     margin-top: 50px;
 }
 
-.web-box-ep{
+.web-box-ep {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -418,30 +517,33 @@ textarea {
         gap: 0px;
     }
 
-    .web-img{
+    .web-img {
         width: 350px;
     }
-    .web-img img{
+
+    .web-img img {
         width: 350px;
     }
 }
 
-@media only screen and (max-width: 445px){
+@media only screen and (max-width: 445px) {
 
-    .web-img{
+    .web-img {
         width: 300px;
     }
-    .web-img img{
+
+    .web-img img {
         width: 300px;
     }
 
 }
 
-@media only screen and (max-width: 365px){
-    .web-img{
+@media only screen and (max-width: 365px) {
+    .web-img {
         width: 270px;
     }
-    .web-img img{
+
+    .web-img img {
         width: 270px;
     }
 }
