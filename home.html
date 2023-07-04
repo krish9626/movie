@@ -1,32 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>series hub</title>
 
+
     <link rel="shortcut icon" href="camera-movie-regular-240.png" type="image/x-icon">
+
 
     <!-- ===== BOX-ICON STYLESHEET ===== -->
 
+
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
 
     <!-- ===== MAIN STYLESHEET ===== -->
 
+
     <link rel="stylesheet" href="style.css">
 
+
     <!-- ===== GOOGLE FONT ===== -->
+
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 </head>
 
+
 <body>
     <div class="header">
         <h1><span>Series</span>Hub</h1>
     </div>
+
 
     <div class="search-bar">
         <div class="search-box">
@@ -35,9 +45,24 @@
         </div>
     </div>
 
+
+    <div class="navbar">
+        <ul class="nlist">
+            <li><a href=""><i class='bx bx-menu'></i></a></li>
+            <li><a href="">Home</a></li>
+            <li><a href="">Movie</a></li>
+            <li><a href="">Web Series</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+    </div>
+
+
     <div class="container">
 
+
         <!-- ===== movie box ===== -->
+
 
         <!-- === farzi === -->
         <div class="box">
@@ -52,6 +77,7 @@
             </a>
         </div>
 
+
         <!-- === sacred games === -->
         <div class="box">
             <a href="sacredgame.html">
@@ -65,18 +91,20 @@
             </a>
         </div>
 
-               <!-- === hostel daze === -->
-               <div class="box">
-                <a href="hostel daze.html">
-                    <div class="img">
-                        <img src="hostel daze.jpg" alt="">
-                    </div>
-                    <div class="movie-name">
-                        <h3>hostel daze</h3>
-                        <p>web series</p>
-                    </div>
-                </a>
-            </div>
+
+        <!-- === hostel daze === -->
+        <div class="box">
+            <a href="hostel daze.html">
+                <div class="img">
+                    <img src="hostel daze.jpg" alt="">
+                </div>
+                <div class="movie-name">
+                    <h3>hostel daze</h3>
+                    <p>web series</p>
+                </div>
+            </a>
+        </div>
+
 
         <!-- === the family man === -->
         <div class="box">
@@ -91,6 +119,7 @@
             </a>
         </div>
 
+
         <!-- === mirzapur === -->
         <div class="box">
             <a href="7.html">
@@ -104,18 +133,20 @@
             </a>
         </div>
 
-                <!-- === special ops === -->
-                <div class="box">
-                    <a href="7.html">
-                        <div class="img">
-                            <img src="special ops.jpg" alt="">
-                        </div>
-                        <div class="movie-name">
-                            <h3>special ops</h3>
-                            <p>web series</p>
-                        </div>
-                    </a>
+
+        <!-- === special ops === -->
+        <div class="box">
+            <a href="7.html">
+                <div class="img">
+                    <img src="special ops.jpg" alt="">
                 </div>
+                <div class="movie-name">
+                    <h3>special ops</h3>
+                    <p>web series</p>
+                </div>
+            </a>
+        </div>
+
 
         <!-- === rrr === -->
         <div class="box">
@@ -129,6 +160,7 @@
                 </div>
             </a>
         </div>
+
 
         <!-- === kgf chapter 2 === -->
         <div class="box">
@@ -144,9 +176,13 @@
         </div>
 
 
+
+
     </div>
 
+
     <!-- ===== contact us ===== -->
+
 
     <div class="contact-us">
         <div class="contact-us-left">
@@ -164,15 +200,16 @@
             </div>
         </div>
         <div class="contact-us-right">
-            <form action="" method="post" id="form">
-                <input type="text" name="name" id="" placeholder="Your Name">
-                <input type="email" name="email" id="" placeholder="Email">
-                <input type="text" name="subject" id="" placeholder="Write Your Subject">
+            <form action="" method="post" id="form" onsubmit="return validateform()">
+                <input type="text" name="name" id="name" placeholder="Your Name">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="text" name="subject" id="subject" placeholder="Write Your Subject">
                 <textarea name="description" id="" placeholder="Write Your Massage"></textarea>
                 <button type="submit" id="submit">submit</button>
             </form>
         </div>
     </div>
+
 
     <!-- ===== copyrights bar ===== -->
     <div class="footer">
@@ -180,9 +217,13 @@
     </div>
 
 
+
+
     <script type="text/javascript">
 
+
         // for search enggin
+
 
         function search() {
             let filter = document.getElementById('find').value.toUpperCase();
@@ -201,11 +242,15 @@
         }
 
 
+
+
         // for html form to google sheet
+
 
         const form = document.querySelector("#form")
         const submitButton = document.querySelector("#submit")
         const scriptURL = 'https://script.google.com/macros/s/AKfycbyAdsJuWr36EQ3VkE7xm5PgUmJfOitpDUZLMjuyqf_oCr-KGXFP7kw7kAD7fDuiXXgpMQ/exec'
+
 
         form.addEventListener('submit', e => {
             submitButton.disabled = true
@@ -220,12 +265,42 @@
                     alert('Error!', error.message)
                     submitButton.disabled = false
 
+
                 }
                 )
         })
+
+
+
+        function validateform() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var subject = document.getElementById("subject").value;
+
+            var nameregex = /^[a-zA-Z]+$/;
+            var regemail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+            var subregex = /^[a-zA-Z]+$/;
+
+
+            if (!name.match(nameregex)) {
+                alert("name should contain only alphabets");
+                return false;
+            }
+
+            if (!email.match(regemail)) {
+                alert("Invalid email formet");
+            }
+        }
+
+
+
+
     </script>
 
 
+
+
 </body>
+
 
 </html>
